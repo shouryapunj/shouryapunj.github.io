@@ -1,0 +1,65 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.side-section {
+  width: 25%;
+  text-align: center;
+}
+
+.side-section img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #3498db; /* LinkedIn blue color */
+}
+
+.main-section {
+  width: 70%;
+}
+
+h2 {
+  color: #333;
+}
+
+.work-card {
+  background-color: #ecf0f1; /* Light gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.work-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.popup-details {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #3498db; /* Matching LinkedIn blue color */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-card:hover .popup-details {
+  display: block; /* Show on hover */
+}
