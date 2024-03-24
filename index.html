@@ -3,59 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material Icon Library -->
-  <title>Your Name - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Shourya's Portfolio</title>
 </head>
 <body>
-
-  <div class="container">
-    <!-- Side Section with Picture and Social Links -->
-    <aside class="side-section">
-      <img src="your_picture.jpg" alt="Your Picture">
-      <div class="social-links">
-        <a href="your_linkedin_link" target="_blank"><i class="material-icons">linkedin</i></a>
-        <a href="your_instagram_link" target="_blank"><i class="material-icons">instagram</i></a>
-        <a href="your_github_link" target="_blank"><i class="material-icons">github</i></a>
+  <div class="h-screen bg-slate-200 font-mono subpixel-antialiased ...">
+    <!-- Sidebar -->
+    <div class="absolute h-full w-60 bg-cyan-950 ...">
+      <div class="pt-2 pl-6 pr-6 absolute left-0 w-18 grid items-center ...">
+        <span class="pt-6 pb-6">
+          <img class="rounded-full" src="assets/profile-picture.png">
+        </span>
+        <br>
+        <span class="pt-6 pb-6 pl-10 text-xl text-slate-50 underline underline-offset-2">About Me</span>
       </div>
-    </aside>
-
-    <!-- Main Content Section -->
-    <main class="main-section">
-      <section id="about-me">
-        <h2>About Me</h2>
-        Passionate and curious engineer, who loves to develop applications end to end. I find joy in continual learning and personal growth, embracing each stage of the sdlc. With more than 4 years of experience and a proven ability to adapt in both self-starting and collaborative environments while staying focused in achieving high quality results under strict deadlines
-      </section>
-
-      <!-- Work Experience Section -->
-      <section id="work-experience">
-        <h2>Work Experience</h2>
-
-        <!-- Subsection 1 -->
-        <div class="work-card" id="work-card-1">
-          <h3>Software Engineer, Egen - Peapod Digital Labs</h3>
-          <p>Feb 2023 - Present</p>
-          <!-- Additional details can pop up on hover -->
-          <div class="popup-details">
-            <!-- Your detailed description for this work experience -->
-          </div>
-        </div>
-
-        <!-- Subsection 2 -->
-        <div class="work-card" id="work-card-2">
-          <h3>Software Engineer, Egen - Uptake</h3>
-          <p>July 2021 - Jan 2023</p>
-          <div class="popup-details">
-            <!-- Your detailed description for this work experience -->
-          </div>
-        </div>
-
-        <!-- Subsection 3 -->
-        <!-- Repeat the structure for other work experiences -->
-
-      </section>
-    </main>
+    </div>
+    <!-- Main -->
+    <div class="absolute pl-80 pt-10">
+      <span class="text-3xl underline underline-offset-1">Hi, I'm Shourya!</span>
+    </div>
   </div>
-
 </body>
 </html>
