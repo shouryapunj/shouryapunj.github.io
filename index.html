@@ -1,27 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Shourya's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shourya Punj | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <div class="h-screen bg-slate-200 font-mono subpixel-antialiased ...">
-    <!-- Sidebar -->
-    <div class="absolute h-full w-60 bg-cyan-950 ...">
-      <div class="pt-2 pl-6 pr-6 absolute left-0 w-18 grid items-center ...">
-        <span class="pt-6 pb-6">
-          <img class="rounded-full" src="assets/profile-picture.png">
-        </span>
-        <br>
-        <span class="pt-6 pb-6 pl-10 text-xl text-slate-50 underline underline-offset-2">About Me</span>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="#hero">Shourya Punj</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
       </div>
-    </div>
-    <!-- Main -->
-    <div class="absolute pl-80 pt-10">
-      <span class="text-3xl underline underline-offset-1">Hi, I'm Shourya!</span>
-    </div>
-  </div>
+      <div class="nav-right">
+        <div class="social-icons" style="display: flex; gap: 16px; font-size: 1.3rem;">
+          <a href="mailto:shouryapunj93@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/shouryapunj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/shourya-punj-231a9a149/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span id="theme-icon" class="theme-icon" style="font-size: 1.2rem; margin-right: 8px;"><i class="fas fa-sun"></i></span>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main class="scroll-container">
+    <section id="hero" class="hero" style="scroll-snap-align: start;">
+      <div class="maze-animation" style="flex-shrink: 0;"></div>
+      <div class="hero-content">
+        <h1 class="hero-title" style="color: var(--text-color);">Hi, I'm Shourya <span class="blinking">|</span></h1>
+        <p class="hero-subtitle">
+          <span id="rotating-text"></span>
+        </p>
+        <div class="hero-buttons">
+          <a href="Shourya_Resume.pdf" class="btn" download>Download Resume</a>
+          <a href="#work" class="btn btn-secondary">View Projects</a>
+        </div>
+        <div class="scroll-indicator" style="color: var(--text-color);">Scroll Down <span class="arrow">↓</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="about" style="scroll-snap-align: start;">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About</h2>
+          <p>
+            Software Engineer with over 5 years of experience in developing applications across back-end, front-end, and cloud technologies. Proven ability to adapt in both self-starting and collaborative environments while achieving high-quality results under strict deadlines.
+          </p>
+          <p>
+            Passionate about solving real-world problems with clean and efficient code. I enjoy working across the stack and take pride in writing code that's easy to read, maintain, and scale.
+          </p>
+          <p><strong>Current Role:</strong> Software Engineer 2 at Intuit, Mountain View, CA.</p>
+          <!-- <p><strong>Certifications:</strong> Front End Web Development with ReactJS.</p> -->
+        </div>
+        <div class="about-image">
+          <img src="display-picture.jpg" alt="Shourya" class="profile-img" style="width: 380px; height: 480px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.boxShadow = '0 10px 36px rgba(0,0,0,0.4)'" onmouseout="this.style.boxShadow = document.body.classList.contains('dark') ? '0 4px 20px rgba(255,255,255,0.15)' : '0 4px 20px rgba(0,0,0,0.2)'" />
+        </div>
+      </div>
+    </section>
+
+
+    <section id="skills" class="skills" style="scroll-snap-align: start; display:none;">
+      <div class="skills-container">
+        <div class="skills-text">
+          <h2>Key Skills</h2>
+          <br/>
+          <div class="skills-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 32px; justify-items: center;">
+            <div style="text-align: center; width: 100%; max-width: 120px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="48" alt="Java" /><div>Java</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" width="48" alt="Kotlin" /><div>Kotlin</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" alt="Python" /><div>Python</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="48" alt="Spring Boot" /><div>Spring Boot</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="48" alt="PostgreSQL" /><div>PostgreSQL</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" width="48" alt="Elasticsearch" /><div>Elasticsearch</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="48" alt="AWS" /><div>AWS</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="48" alt="Docker" /><div>Docker</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" width="48" alt="Jenkins" /><div>Jenkins</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://img.icons8.com/color/48/azure-1.png" width="48" alt="Azure DevOps" /><div>Azure DevOps</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original-wordmark.svg" width="48" alt="Kafka" /><div>Kafka</div></div>
+            <div style="text-align: center; width: 100px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gradle/gradle-original.svg" width="48" alt="Gradle" /><div>Gradle</div></div>
+          </div>
+          <p><strong>Testing & Tools:</strong> JUnit, Mockito, Cucumber Tests, Postman, Insomnia, IntelliJ, Git, Github, Splunk, New Relic, Datadog, PagerDuty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work" style="scroll-snap-align: start;">
+      <h2 style="font-size: 2.2rem;">Work Experience</h2>
+      <div class="work-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <div class="work-card" style="background-image: url('intuit.png'); background-size: 50%; background-repeat: no-repeat; background-position: center; height: 380px; width: 100%;">
+          <div class="work-overlay" >
+            <h3>Software Engineer 2</h3>
+            <p>Worked on Money Profile services in fintech department</p>
+            <h4>Sept 2024 - Present</h4>
+          </div>
+        </div>
+        <div class="work-card" style="background-image: url('egen.png'); background-size: 65%; background-repeat: no-repeat; background-position: center; height: 380px; width: 100%;">
+          <div class="work-overlay">
+            <h3>Software Engineer</h3>
+            <p>Worked on Industrial IoT project and e-commerce application</p>
+            <h4>July 2021 - Aug 2024</h4>
+          </div>
+        </div>
+        <div class="work-card" style="background-image: url('zs.png'); background-size: 65%; background-repeat: no-repeat; background-position: center; height: 380px; width: 100%;">
+          <div class="work-overlay">
+            <h3>Business Technology Analyst</h3>
+            <p>Built cloud based data warehousing solution</p>
+            <h4>July 2018 - July 2019</h4>
+          </div>
+        </div>
+        <div class="work-card" style="background-image: url('reflexis.jpg'); background-size: 65%; background-repeat: no-repeat; background-position: center; height: 380px; width: 100%;">
+          <div class="work-overlay">
+            <h3>Software Engineer Intern</h3>
+            <p>Worked on workforce scheduler application</p>
+            <h4>Jan 2018 - June 2018</h4>
+          </div>
+        </div>
+        <div class="work-card" style="background-image: url('ofbusiness.png'); background-size: 60%; background-repeat: no-repeat; background-position: center; height: 380px; width: 100%;">
+          <div class="work-overlay">
+            <h3>Software Engineer Intern</h3>
+            <p>Developed tender crawler framework</p>
+            <h4>July 2017 - Dec 2017</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education-section" style="scroll-snap-align: start;">
+      <h2 style="font-size: 2.2rem;">Education</h2>
+      <div class="education-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <div class="work-card" style="background-image: url('njit.jpg'); background-size: 70%; background-repeat: no-repeat; background-position: center; height: 600px; width: 100%;">
+          <div class="work-overlay">
+            <h3>Master of Science, Computer Science</h3>
+            <!-- <p>New Jersey Institute of Technology</p> -->
+            <h4>Sept 2019 - May 2021</h4>
+          </div>
+        </div>
+        <div class="work-card" style="background-image: url('bits.png'); background-size: 70%; background-repeat: no-repeat; background-position: center; height: 600px; width: 100%;">
+          <div class="work-overlay">
+            <h3>M.Sc (Hons) Mathematics and B.E (Hons) Electrical and Electronics</h3>
+            <!-- <p>Birla Institute of Technology & Science, Pilani</p> -->
+            <h4>Aug 2013 - May 2018</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="easter-egg">
+    <p>This site was built with HTML, CSS, JS — and a sprinkle of prompt engineering ✨</p>
+  </footer>
 </body>
 </html>
